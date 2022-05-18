@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/information', [
+    'as' => 'information', 'uses' => 'HomeController@information'
+]);
+
+$router->get('/image', [
+    'as' => 'image', 'uses' => 'HomeController@image'
+]);
