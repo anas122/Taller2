@@ -29,6 +29,7 @@ class HomeController extends Controller
             "name" => $randomNea['name'],
             "height" => $randomNea['height'],
             "ability" => $randomNea['ability'],
+            'server_ip' => gethostbyname(gethostname()),
         ]);
     }
 
@@ -37,6 +38,6 @@ class HomeController extends Controller
         $totalNeas = (count(HomeController::$neas));
         $randomNumber = (rand(0,($totalNeas-1)));
         $randomNea = HomeController::$neas[$randomNumber];
-        return view('Image', ['image' => $randomNea['image'], 'philosophicalPhrase' => $randomNea['philosophicalPhrase']]);
+        return view('Image', ['image' => $randomNea['image'], 'philosophicalPhrase' => $randomNea['philosophicalPhrase'], 'server_ip' => gethostbyname(gethostname())]);
     }
 }

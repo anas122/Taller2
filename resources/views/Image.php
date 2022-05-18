@@ -28,6 +28,7 @@
 <body>
     <div class="container">
         <h1 class="philosophicalPhrase"><?php echo $philosophicalPhrase; ?></h1>
+        <h1 class="philosophicalPhrase"><?php echo $server_ip; ?></h1>
         <img class="image" src=<?php echo $image; ?> alt="">
     </div>
 </body>
